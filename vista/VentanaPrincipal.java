@@ -20,7 +20,7 @@ public class VentanaPrincipal extends JFrame
 
         //Creación y adición del PanelResultados
         miPanelResultados = new PanelResultados();
-        miPanelResultados.setBounds(10, 300, WIDTH, HEIGHT);
+        miPanelResultados.setBounds(10, 210, 560, 190);
         add(miPanelResultados);
 
 
