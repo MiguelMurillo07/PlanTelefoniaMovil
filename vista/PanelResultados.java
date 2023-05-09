@@ -30,4 +30,15 @@ public class PanelResultados extends JPanel
         borde.setTitleColor(Color.BLUE);
         setBorder(borde);
     }
+
+
+    public void mostrarResultado(String msj)
+    {
+        taResultado.setText(msj);
+    }
+
+    public void borrar()
+    {
+        taResultado.setText("");
+    }
 }
