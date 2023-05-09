@@ -26,7 +26,7 @@ public class VentanaPrincipal extends JFrame
 
         //Caracteristicas de la ventana
         setTitle("Plan Telefónico");
-        setSize(600,500);
+        setSize(600,450);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
