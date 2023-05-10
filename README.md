@@ -5,4 +5,4 @@ Se desea gestionar un plan de Telefonía Móvil. El plan tiene un número de cel
 Calcular el total a pagar teniendo en cuenta que si el operador es "Wom" tiene un 50% de descuento.
 
 ## Diagrama Clases
-![Diagrama de Clases] (DiagramadeClases.png "Diagrama de Clases")
+![Diagrama de Clases (DiagramadeClases.png "Diagrama de Clases")]

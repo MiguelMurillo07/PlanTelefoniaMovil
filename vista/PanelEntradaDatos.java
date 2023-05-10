@@ -97,11 +97,32 @@ public class PanelEntradaDatos extends JPanel
         btSalir.addActionListener(pAl);
     }
 
-
-
     public void borrar()
     {
         cbOperador.removeAllItems();
     }
+
+    //Método de acceso a la informacion
+    public String getNumero()
+    {
+        return tfNumero.getText();
+    }
+
+    public String getCantidadMinutos()
+    {
+        return tfCantidadMinutos.getText();
+    }
+
+    public String getValorMinuto()
+    {
+        return tfValorMinuto.getText();
+    }
+
+    public String getOperador()
+    {
+        return cbOperador.getSelectedItem().toString();
+    }
+
+    
 
 }

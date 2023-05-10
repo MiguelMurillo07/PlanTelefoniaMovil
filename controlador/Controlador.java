@@ -27,7 +27,7 @@ public class Controlador implements ActionListener
 
         if (cmd.equals("calcular"))
         {
-
+            int numero = Integer.parseInt(miVentana.miPanelEntradaDatos.getN)
         }
 
         if(cmd.equals("salir"))

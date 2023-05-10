@@ -7,6 +7,7 @@ public class Plan
     private String operador;
     private int cantidadMinutos;
     private double valorMinuto;
+    private double valorPlan;
 
     public Plan(int pNumeroCelular, String pOperador, int pCantidadMinutos, double pValorMinuto)
     {
@@ -23,43 +24,68 @@ public class Plan
 
     public int getNumeroCelular()
     {
-        return this.numeroCelular;
+        return numeroCelular;
     }
 
     public String getOperador()
     {
-        return this.operador;
+        return operador;
     }
 
     public int getCantidadMinutos()
     {
-        return this.cantidadMinutos;
+        return cantidadMinutos;
     }
 
     public double getValorMinuto()
     {
-        return this.valorMinuto;
+        return valorMinuto;
     }  
 
-    public double calcularValorPlan()
+    public void setNumeroCelular(int pNumeroCelular)
     {
-        return this.cantidadMinutos * this.valorMinuto;
+        numeroCelular = pNumeroCelular;
     }
 
-    public double calcularValorPlan(int pCantidadMinutos)
+    public void setOperador(String pOperador)
     {
-        return pCantidadMinutos * this.valorMinuto;
+        operador = pOperador;
     }
 
-    public double calcularValorPlan(double pValorMinuto)
+    public void setCantidadMinutos(int pCantidadMinutos)
     {
-        return this.cantidadMinutos * pValorMinuto;
+        cantidadMinutos = pCantidadMinutos;
     }
+
+    public void setValorMinuto(double pValorMinuto)
+    {
+        valorMinuto = pValorMinuto;
+    }
+
+    
+
 
     public double calcularValorPlan(int pCantidadMinutos, double pValorMinuto)
     {
         return pCantidadMinutos * pValorMinuto;
     }
 
+    public void obtenerTotal(int cantidadMinutos, double valorMinuto)
+    {
+        double total = valorMinuto * cantidadMinutos;
+        if (operador.equals("Wom"))
+        {
+            valorPlan = total*0.5;
+        }
+        else 
+        {
+            valorPlan = total;
+        }
+    }
+
+    public double getObtenerTotal()
+    {
+        return valorPlan;
+    }
 
 }
