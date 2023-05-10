@@ -29,12 +29,12 @@ public class Controlador implements ActionListener
         {
             int numero = Integer.parseInt(miVentana.miPanelEntradaDatos.getNumero());
             String operador = miVentana.miPanelEntradaDatos.getOperador();
-            int minutos = Integer.parseInt(miVentana.miPanelEntradaDatos.getValorMinuto());
+            int minutos = Integer.parseInt(miVentana.miPanelEntradaDatos.getCantidadMinutos());
             double valorMinuto = Double.parseDouble(miVentana.miPanelEntradaDatos.getValorMinuto());
-            Plan plantlf = new Plan(numero, operador, minutos, valorMinuto);
-            plantlf.calcularValorPlan(minutos, valorMinuto);
+            Plan planTlf = new Plan(numero, operador, minutos, valorMinuto);
+            planTlf.obtenerTotal(minutos, valorMinuto);
 
-            miVentana.miPanelResultados.mostrarResultado("Información detallada del plan: \n\nNúmero del plan telefónico: "+numero+"\nOperador elegido: "+operador+"\nTotal de minutos:"+minutos+"\nValor de cada minuto: "+miPlan.getValorMinuto()+"\n\nCosto total a pagar por el Plan telefónico es: "+miPlan.getObtenerTotal());
+            miVentana.miPanelResultados.mostrarResultado("Información detallada del Plan Telefónico: \n\nNúmero del plan: "+numero+"\nOperador elegido: "+operador+"\nTotal de minutos:"+minutos+"\nValor de cada minuto: "+valorMinuto+"\n\nCosto total a pagar por el Plan telefónico es: "+planTlf.getObtenerTotal());
         }
 
         if(cmd.equals("salir"))
@@ -43,7 +43,7 @@ public class Controlador implements ActionListener
         }
 
 
-        if (cmd .equals("borrar"))
+        if (cmd.equals("borrar"))
         {
             this.miVentana.miPanelEntradaDatos.borrar();
             this.miVentana.miPanelResultados.borrar();

@@ -64,16 +64,10 @@ public class Plan
 
     
 
-
-    public double calcularValorPlan(int pCantidadMinutos, double pValorMinuto)
-    {
-        return pCantidadMinutos * pValorMinuto;
-    }
-
     public void obtenerTotal(int cantidadMinutos, double valorMinuto)
     {
         double total = valorMinuto * cantidadMinutos;
-        if (operador.equals("Wom"))
+        if (getOperador().equals("Wom"))
         {
             valorPlan = total*0.5;
         }

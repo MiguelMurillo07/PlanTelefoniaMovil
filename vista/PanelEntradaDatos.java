@@ -44,6 +44,7 @@ public class PanelEntradaDatos extends JPanel implements ItemListener
         cbOperador.addItem("Wom");
         cbOperador.addItem("Claro");
         this.add(cbOperador);
+        cbOperador.addItemListener(this);
 
         lbNumero = new JLabel("Número Telefónico: ");
         lbNumero.setBounds(28,20,120,40);
@@ -101,7 +102,10 @@ public class PanelEntradaDatos extends JPanel implements ItemListener
 
     public void borrar()
     {
-        cbOperador.removeAllItems();
+        cbOperador.setSelectedItem("");
+        tfCantidadMinutos.setText("");
+        tfNumero.setText("");
+        tfValorMinuto.setText("");
     }
 
     //Método de acceso a la informacion
@@ -122,12 +126,12 @@ public class PanelEntradaDatos extends JPanel implements ItemListener
 
     public String getOperador()
     {
-        return cbOperador.getSelectedItem().toString();
+        return (String) cbOperador.getSelectedItem();
     }
 
 
     @Override
-    public void itemStateChanged(ItemEvent e) 
+    public void itemStateChanged(ItemEvent k) 
     {
 
     }

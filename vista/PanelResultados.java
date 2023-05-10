@@ -40,5 +40,6 @@ public class PanelResultados extends JPanel
     public void borrar()
     {
         taResultado.setText("");
+        
     }
 }
