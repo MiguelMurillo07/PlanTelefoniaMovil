@@ -27,7 +27,14 @@ public class Controlador implements ActionListener
 
         if (cmd.equals("calcular"))
         {
-            int numero = Integer.parseInt(miVentana.miPanelEntradaDatos.getN)
+            int numero = Integer.parseInt(miVentana.miPanelEntradaDatos.getNumero());
+            String operador = miVentana.miPanelEntradaDatos.getOperador();
+            int minutos = Integer.parseInt(miVentana.miPanelEntradaDatos.getValorMinuto());
+            double valorMinuto = Double.parseDouble(miVentana.miPanelEntradaDatos.getValorMinuto());
+            Plan plantlf = new Plan(numero, operador, minutos, valorMinuto);
+            plantlf.calcularValorPlan(minutos, valorMinuto);
+
+            miVentana.miPanelResultados.mostrarResultado("Información detallada del plan: \n\nNúmero del plan telefónico: "+numero+"\nOperador elegido: "+operador+"\nTotal de minutos:"+minutos+"\nValor de cada minuto: "+miPlan.getValorMinuto()+"\n\nCosto total a pagar por el Plan telefónico es: "+miPlan.getObtenerTotal());
         }
 
         if(cmd.equals("salir"))

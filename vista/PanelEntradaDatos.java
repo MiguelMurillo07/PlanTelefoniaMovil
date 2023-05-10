@@ -9,10 +9,12 @@ import javax.swing.JTextField;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.border.TitledBorder;
 
-public class PanelEntradaDatos extends JPanel
+public class PanelEntradaDatos extends JPanel implements ItemListener
 {
     private JLabel lbOperador;
     private JComboBox cbOperador;
@@ -43,8 +45,8 @@ public class PanelEntradaDatos extends JPanel
         cbOperador.addItem("Claro");
         this.add(cbOperador);
 
-        lbNumero = new JLabel("Número: ");
-        lbNumero.setBounds(45,25,90,30);
+        lbNumero = new JLabel("Número Telefónico: ");
+        lbNumero.setBounds(28,20,120,40);
         this.add(lbNumero);
 
         tfNumero = new JTextField();
@@ -123,6 +125,11 @@ public class PanelEntradaDatos extends JPanel
         return cbOperador.getSelectedItem().toString();
     }
 
-    
+
+    @Override
+    public void itemStateChanged(ItemEvent e) 
+    {
+
+    }
 
 }
